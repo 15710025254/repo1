@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Furion" Version="4.8.8.50" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="SqlSugarCore" Version="5.1.4.113" />
+    <PackageReference Include="Yitter.IdGenerator" Version="1.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JWPJ.Common\JWPJ.Common.csproj" />
+    <ProjectReference Include="..\JWPJ.Models\JWPJ.Models.csproj" />
+  </ItemGroup>
+
+</Project>

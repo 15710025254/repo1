@@ -1,0 +1,9 @@
+﻿global using JWPJ.Core;
+global using JWPJ.Models;
+global using JWPJ.Common;
+global using SqlSugar;
+global using Furion.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using Furion.DatabaseAccessor;
+global using Furion.FriendlyException;
+global using Mapster;
