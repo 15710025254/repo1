@@ -135,4 +135,25 @@ public enum ErrorCodeEnum
     /// </summary>
     [ErrorCodeItemMetadata("获取部门异常")]
     D3016,
+    /// <summary>
+    /// 批量添加失败
+    /// </summary>
+    [ErrorCodeItemMetadata("批量添加失败")]
+    D3017,
+    /// <summary>
+    /// 插入设置列数据失败
+    /// </summary>
+    [ErrorCodeItemMetadata("插入设置列数据失败")]
+    D3018,
+    /// <summary>
+    /// 事务执行失败
+    /// </summary>
+    [ErrorCodeItemMetadata("事务执行失败")]
+    D3019,
+    /// <summary>
+    /// 批量更新失败
+    /// </summary>
+    [ErrorCodeItemMetadata("批量更新失败")]
+    D3020,
+
 }

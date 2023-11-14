@@ -1,5 +1,6 @@
 ﻿
 using Furion.DatabaseAccessor;
+using Furion.Logging;
 
 namespace JWPJ.Core;
 
@@ -49,8 +50,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"新增失败：{ex.Message}");
-            return false;
+            Log.Error($"新增失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3003);
         }
     }
     /// <summary>
@@ -67,8 +68,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"批量新增失败：{ex.Message}");
-            return false;
+            Log.Error($"批量新增失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3017);
         }
     }
     /// <summary>
@@ -87,8 +88,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"插入设置列数据失败：{ex.Message}");
-            return false;
+            Log.Error($"插入设置列数据失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3018);
         }
     }
     #endregion
@@ -109,8 +110,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"更新失败：{ex.Message}");
-            return false;
+            Log.Error($"更新失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     }
     /// <summary>
@@ -129,8 +130,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"根据实体类更新指定列失败：{ex.Message}");
-            return false;
+            Log.Error($"根据实体类更新指定列失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     }
     /// <summary>
@@ -149,8 +150,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"根据实体类更新指定列失败：{ex.Message}");
-            return false;
+            Log.Error($"根据实体类更新指定列失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     }
     /// <summary>
@@ -168,8 +169,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"更新指定列失败：{ex.Message}");
-            return false;
+            Log.Error($"更新指定列失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     } 
     #endregion
@@ -189,8 +190,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         catch (Exception ex)
         {
             Context.Ado.RollbackTran();
-            //Log.Error($"事务执行失败：{ex.Message}");
-            return false;
+            Log.Error($"事务执行失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3019);
         }
     }
 
@@ -219,8 +220,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"删除失败：{ex.Message}");
-            return false;
+            Log.Error($"删除失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3005);
         }
     }
     /// <summary>
@@ -247,8 +248,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"根据查询条件删除失败：{ex.Message}");
-            return false;
+            Log.Error($"根据查询条件删除失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3005);
         }
     }
     #endregion
@@ -458,8 +459,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"新增失败：{ex.Message}");
-            return false;
+            Log.Error($"新增失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3003);
         }
     }
     /// <summary>
@@ -476,8 +477,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"批量新增失败：{ex.Message}");
-            return false;
+            Log.Error($"批量新增失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3017);
         }
     }
     /// <summary>
@@ -494,8 +495,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"更新失败：{ex.Message}");
-            return false;
+            Log.Error($"更新失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     }
     /// <summary>
@@ -513,8 +514,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"更新失败：{ex.Message}");
-            return false;
+            Log.Error($"更新失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     }
     /// <summary>
@@ -533,8 +534,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"更新失败：{ex.Message}");
-            return false;
+            Log.Error($"更新失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3006);
         }
     }
     #endregion
@@ -577,8 +578,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"fastest批量新增失败：{ex.Message}");
-            return false;
+            Log.Error($"fastest批量新增失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3017);
         }
     }
     /// <summary>
@@ -596,8 +597,8 @@ public class SqlSugarRepository<T> : SimpleClient<T> where T : class, new()
         }
         catch (Exception ex)
         {
-            //Log.Error($"fastest批量更新失败：{ex.Message}");
-            return false;
+            Log.Error($"fastest批量更新失败：{ex.Message}");
+            throw Oops.Oh(ErrorCodeEnum.D3020);
         }
     }
     #endregion
