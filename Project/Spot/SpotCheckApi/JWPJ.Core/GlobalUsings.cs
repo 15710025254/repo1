@@ -1,0 +1,21 @@
+﻿
+global using JWPJ.Common;
+global using Mapster;
+global using JWPJ.Models;
+global using SqlSugar;
+global using Furion;
+global using Furion.DependencyInjection;
+global using Furion.DatabaseAccessor;
+global using Furion.ConfigurableOptions;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc.Filters;
+global using System.ComponentModel;
+global using System.Linq.Expressions;
+global using Furion.Authorization;
+global using Microsoft.AspNetCore.Authorization;
+global using Yitter.IdGenerator;
+global using Furion.FriendlyException;
+global using Furion.Localization;
+global using NewLife.Caching;

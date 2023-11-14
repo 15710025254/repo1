@@ -1,0 +1,40 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/v4/schemas/v4/furion-schema.json",
+
+  // 详细数据库配置见SqlSugar官网（第一个为默认库）
+  "DbConnection": {
+    "EnableConsoleSql": false, // 启用控制台打印SQL
+    "MutiDBEnabled": true, //是否开启多库模式
+    "MainDB": "DORMITORY", //当前项目的主库，所对应的连接字符串的Enabled必须为true
+    "ConnectionConfigs": [
+      {
+        "InitKeyType": 1,
+        "ConfigId": "DORMITORY",
+        "DbType": "Oracle", // MySql、SqlServer、Sqlite、Oracle、PostgreSQL、Dm、Kdbndp、Oscar、MySqlConnector、Access、OpenGauss、QuestDB、HG、ClickHouse、GBase、Odbc、Custom
+        "ConnectionString": "Data Source=10.66.58.14/oadb1;User Id=DORMITORY;Password=123456;", //点检数据库
+        "IsAutoCloseConnection": true
+      },
+      {
+        "InitKeyType": 1,
+        "ConfigId": "ERP",
+        "DbType": "Oracle",
+        "ConnectionString": "Data Source=10.100.1.32/topprod;User Id=JWREPORT;Password=JWREPORT;", //ERP数据库
+        "IsAutoCloseConnection": true
+      }
+      //{
+      //  "InitKeyType": 1,
+      //  "ConfigId": "DORMITORY",
+      //  "DbType": "Oracle",
+      //  "ConnectionString": "Data Source=.;Initial Catalog=Dormitory;User ID=sys;Password=123456;", //点检数据库: null,
+      //  "IsAutoCloseConnection": true
+      //},
+      //{
+      //  "InitKeyType": 1,
+      //  "ConfigId": "AdminCoreDB",
+      //  "DbType": "SqlServer",
+      //  "ConnectionString": "Data Source=.;Initial Catalog=AdminCoreDB;User ID=sa;Password=123456;", //点检数据库: null,
+      //  "IsAutoCloseConnection": true
+      //}
+    ]
+  }
+}

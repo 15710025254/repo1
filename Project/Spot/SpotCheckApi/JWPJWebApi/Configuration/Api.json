@@ -1,0 +1,37 @@
+{
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/v4/schemas/v4/furion-schema.json",
+
+  "ApiConfig": {
+    "ApiList": [
+      {
+        "ApiKey": "JWMES",
+        "Companyno": "JW",
+        "LoginName": "ganxin", //ganxin
+        "LoginPwd": "123456",
+        "Api": "http://messerver01.jingweiec.com:881/Server.svc/api/invoke"
+      },
+      {
+        "ApiKey": "JSMES",
+        "Companyno": "JS",
+        "LoginName": "CNCSC",
+        "LoginPwd": "Cnc123",
+        "Api": "http://jsmes.jingweiec.com:887/server.svc/api/invoke"
+      },
+      {
+        "ApiKey": "BDMES",
+        "Companyno": "BD",
+        "LoginName": "ganxin",
+        "LoginPwd": "123456",
+        "Api": "http://bdmesap01.jingweiec.com:887/Server.svc/api/invoke"
+      },
+      {
+        "ApiKey": "SYSAPI",
+        "Companyno": "JW",
+        "LoginName": "",
+        "LoginPwd": "",
+        "Api": "http://ims.jingweiec.com:8064"
+      }
+    ]
+  }
+
+}

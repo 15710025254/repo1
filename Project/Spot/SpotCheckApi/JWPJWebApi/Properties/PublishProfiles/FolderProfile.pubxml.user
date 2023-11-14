@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\project\.NetPorject\FA_MES_Project\C#\CMS_MOLD_NETCORE\SpotCheckApi\JWPJWebApi\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-11-14T09:00:29.8412564Z;True|2023-11-14T13:53:19.6446192+08:00;True|2023-11-14T13:41:28.1972091+08:00;True|2023-11-14T08:05:06.8583730+08:00;True|2023-11-13T08:41:43.9968033+08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
