@@ -42,4 +42,10 @@ public interface IInsEquipmentCateService:ITransient
     /// <param name="Id">主键ID</param>
     /// <returns></returns>
     Task DelInsEquipmentCate(long Id);
+
+    /// <summary>
+    /// 导出
+    /// </summary>
+    /// <returns></returns>
+    Task<List<ExportEquipmentCateDto>> ExportLogEx();
 }

@@ -1,4 +1,8 @@
 ﻿
+using Magicodes.ExporterAndImporter.Excel;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
+
 namespace JWPJ.Service;
 
 /// <summary>
@@ -111,6 +115,19 @@ public class InsEquipmentCateService : SqlSugarRepository<InsEquipmentCate>, IIn
             throw Oops.Oh(ErrorCodeEnum.D3004);
 
         await _repository.UpdateAsync(x => x.Id == Id, it => new InsEquipmentCate { IsPhantom = 1 });
+    }
+
+    /// <summary>
+    /// 导出
+    /// </summary>
+    /// <returns></returns>
+    public async Task<List<ExportEquipmentCateDto>> ExportLogEx()
+    {
+        var logExList = await _repository.AsQueryable()
+            .OrderBy(u => u.CreateTime, OrderByType.Desc)
+            .Select<ExportEquipmentCateDto>().ToListAsync();
+
+        return logExList;
     }
 
 }

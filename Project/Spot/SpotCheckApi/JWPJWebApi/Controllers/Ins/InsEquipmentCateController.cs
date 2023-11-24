@@ -1,4 +1,7 @@
 ﻿
+using Magicodes.ExporterAndImporter.Excel;
+using SqlSugar;
+
 namespace JWPJWebApi.Controllers;
 
 /// <summary>
@@ -69,5 +72,19 @@ public class InsEquipmentCateController : IDynamicApiController
     public async Task DelInsEquipmentCate(long Id)
     {
         await _insEquipmentCateService.DelInsEquipmentCate(Id);
+    }
+
+    /// <summary>
+    /// 导出设备类别
+    /// </summary>
+    /// <returns></returns>
+    [ApiDescriptionSettings(Name = "Export"), NonUnify]
+    [HttpPost("导出设备类别")]
+    public async Task<IActionResult> ExportLogEx()
+    {
+        var logExList =await _insEquipmentCateService.ExportLogEx();
+        IExcelExporter excelExporter = new ExcelExporter();
+        var res = await excelExporter.ExportAsByteArray(logExList);
+        return new FileStreamResult(new MemoryStream(res), "application/octet-stream") { FileDownloadName = DateTime.Now.ToString("yyyyMMddHHmm") + "设备类别.xlsx" };
     }
 }
